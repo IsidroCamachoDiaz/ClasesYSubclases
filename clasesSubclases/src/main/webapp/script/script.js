@@ -2,7 +2,7 @@ class Poligono{
 	constructor(altura,ancho){
 		this.altura=altura;
 		this.ancho=ancho;
-		const nombre="Poligono";
+		this.nombre="Poligono";
 	}
 	devulveNombre(){
 		return this.nombre;
@@ -14,13 +14,17 @@ function clasePoligono(){
 	document.write(p1.altura+" "+p1.ancho);
 }
 class Cuadrado extends Poligono{
-	constructor(lados){
-		super(altura);
-		super(ancho);
-		this.lados=lados;
-		let nombre="Cuadrado";
+	constructor(lado){
+		super();
+		this.lado=lado;
+		this.nombre="Cuadrado";
 	}
 	calculaArea(){
-		return this.ancho**2;
+		return this.lado*this.lado;
 	}
+}
+
+function claseCuadrado(){
+	var c1 = new Cuadrado(4);
+document.write(c1.calculaArea());
 }
